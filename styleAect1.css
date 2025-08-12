@@ -1,0 +1,73 @@
+body {
+ width: 100%;/*si puo anche usare 100vw*/
+
+ }
+ header
+{
+    background-color: lightskyblue;
+    position: absolute;
+    width: 100%;
+    
+
+    /*text-align , text-context*/
+}
+aside {
+    float:left;
+    width: 20%;/*prima */
+    margin-top: 7%;
+    background-color: aliceblue;
+}
+main
+{
+    float : right;
+    width:75% ; /* di conseguenza */
+   /*margin-top: 17%;*/
+    margin-left: 1rem;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    /*background-color: yellow;*/
+
+}
+main >nav{
+    
+    float:right;
+    /*background-color: green;*/
+    width:60%;
+    
+     
+}
+.line-bleue {
+    border: none;
+    height: 6px;
+    background-color: #007bff;
+    width: 100%;
+    margin: 0;
+}
+#imageCarousel img {
+  margin-top: 5%;
+  height: 220px; /* fixe la hauteur */
+  object-fit: cover; /* pour que l’image garde ses proportions */
+  margin-bottom: 5%;
+}
+#imageCarousel .carousel-control-prev-icon,
+#imageCarousel .carousel-control-next-icon {
+  background-size: 5rem 5rem; /* taille plus grande */
+}
+/* Déplace les flèches à l'extérieur du carousel */
+#imageCarousel .carousel-control-prev,
+#imageCarousel .carousel-control-next {
+  width: auto; /* évite que la zone cliquable soit trop large */
+  top: 50%; /* centre verticalement */
+  transform: translateY(-50%);
+}
+
+#imageCarousel .carousel-control-prev {
+  left: -80px; /* décale vers la gauche */
+}
+
+#imageCarousel .carousel-control-next {
+  right: -80px; /* décale vers la droite */
+}
+
+
+

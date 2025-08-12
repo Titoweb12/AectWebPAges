@@ -1,0 +1,33 @@
+body{
+color: white;
+}
+/* Pleine page sans marges */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Animation de fond */
+    body {
+      background-size: cover;
+      background-position: center;
+      animation: slideshow 20s infinite;
+    }
+
+    /* Défilement des images */
+    @keyframes slideshow {
+      0%   { background-image: url('imagesAect/image1.png'); }
+      33%  { background-image: url('imagesAect/image2.png'); }
+      66%  { background-image: url('imagesAect/image3.png'); }
+      100% { background-image: url('imagesAect/image4.png'); }
+    }
+    .navbar-nav .nav-link {
+            color: white; /* couleur par défaut */
+            transition: all 0.3s ease;
+        }
+
+        /* Effet au survol */
+        .navbar-nav .nav-link:hover {
+            color: orange;
+            text-shadow: 0 0 8px rgba(255, 165, 0, 0.8); /* effet brillant */
+        }
