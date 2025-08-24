@@ -1,33 +1,157 @@
-body{
-color: white;
+/* Couleur du texte par défaut */
+body {
+  color: white;
 }
-/* Pleine page sans marges */
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
 
-    /* Animation de fond */
-    body {
+/* Pleine page sans marges */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Fond responsive dynamique */
+body {
+  background-image: url('imagesAect/Couverture.png');
+  background-position: center;    /* centrée horizontalement et verticalement */
+  background-repeat: no-repeat;   /* pas de répétition */
+  background-size: cover;       /* garde l'image entière */
+  background-color: #000;         /* couleur de fond si zones vides */
+  background-attachment: fixed;   /* reste fixe au scroll */
+}
+
+/* Conteneur principal pour centrer le texte */
+main {
+  height: 100vh;                  /* toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center;        /* centre horizontalement */
+  /*align-items: center;            /* centre verticalement */
+  text-align: center;
+  padding: 0 1rem;                /* petit padding pour mobile */
+}
+
+/* Titre principal */
+main> div {
+  margin-top: 10%;
+  font-family: 'Arial', sans-serif; /* police locale classique */
+  font-size: 4rem; /*taille du titre*/
+  line-height: 1;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  transition: font-size 0.3s ease; /* effet de transition sur taille */
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: orange;
+  text-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+}
+
+/* Espace entre les liens sur PC / tablette */
+.navbar-nav {
+  gap: 25px;
+}
+
+/* Responsive : réduire l’espace sur petits écrans */
+@media (max-width: 768px) {
+  .navbar-nav {
+    gap: 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Grands écrans : agrandissement léger de l'image et texte */
+@media (min-width: 1200px) {
+  body {
+    background-size: min(100% + 200px, auto); /* légère extension de l'image */
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    background-size: min(100% + 400px, auto); /* encore plus grand sur très grands écrans */
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+
+
+#inscription-bar {
+  position: fixed;          /* reste fixe même si la page scroll */
+  bottom: 5px;             /* distance du bas de la page */
+  right: 20px;              /* distance de la droite */
+  width: 15cm;                /* largeur */
+  height: 3cm;               /* hauteur */
+  background-color: #00b7ff; /* bleu Bootstrap */
+  color: white;             /* texte blanc */
+  display: flex;             /* pour centrer le texte */
+  justify-content: center;   /* centre horizontalement */
+  align-items: center;       /* centre verticalement */
+  font-size: 1.5rem;         /* taille du texte */
+  font-weight: bold;          /* texte en gras */
+  border-radius: 10px;        /* coins arrondis */
+  cursor: pointer;            /* effet de survol */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* légère ombre */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animation au survol */
+}
+
+#inscription-bar:hover {
+  transform: translateY(-5px); /* léger levé au survol */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  
+}
+
+/* Style spécifique pour les années */
+#inscription-bar .years {
+  display: block;      /* force le texte à passer à la ligne */
+  margin-top: 2px;     /* petit espace au-dessus */
+  /*font-size: 0.9rem;*/
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /* Animation de fond */
+    /*body {
       background-size: cover;
       background-position: center;
       animation: slideshow 20s infinite;
-    }
+    }*/
 
     /* Défilement des images */
-    @keyframes slideshow {
-      0%   { background-image: url('imagesAect/image1.png'); }
-      33%  { background-image: url('imagesAect/image2.png'); }
-      66%  { background-image: url('imagesAect/image3.png'); }
-      100% { background-image: url('imagesAect/image4.png'); }
-    }
-    .navbar-nav .nav-link {
-            color: white; /* couleur par défaut */
-            transition: all 0.3s ease;
-        }
-
-        /* Effet au survol */
-        .navbar-nav .nav-link:hover {
-            color: orange;
-            text-shadow: 0 0 8px rgba(255, 165, 0, 0.8); /* effet brillant */
-        }
+   /* @keyframes slideshow {
+      0%   { background-image: url('imagesAect/Couverture.png'); }
+      33%  { background-image: url('imagesAect/Couverture.png'); }
+      66%  { background-image: url('imagesAect/Couverture.png'); }
+      100% { background-image: url('imagesAect/Couverture.png'); }
+    }*/
